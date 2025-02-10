@@ -2,10 +2,12 @@ import numpy as np # linear algebra
 import pandas as pd # data processing, CSV file I/O (e.g. pd.read_csv)
 from sklearn.ensemble import RandomForestClassifier
 
-train_data = pd.read_csv("train.csv")
+train_data = pd.read_csv("Titanic/train.csv")
+print("---First 5 rows of train data---")
 print(train_data.head())
 
-test_data = pd.read_csv("test.csv")
+print("---First 5 rows of test data---")
+test_data = pd.read_csv("Titanic/test.csv")
 print(test_data.head())
 
 #loc: lọc ra những hàng có giá trị là 'female'
@@ -44,5 +46,5 @@ predictions = model.predict(X_test)
 output = pd.DataFrame({'PassengerId': test_data.PassengerId, 'Survived': predictions})
 
 # Lưu kết quả dự đoán vào file CSV để nộp
-output.to_csv('submission.csv', index=False)
+output.to_csv('Titanic/submission.csv', index=False)
 print("Your submission was successfully saved!")
