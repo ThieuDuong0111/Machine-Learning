@@ -3,7 +3,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
-data = pd.read_csv("Exercise/Multiple-Linear-Regression/multiple-linear-regression-dataset.csv")
+data = pd.read_csv("Exercise/02-Multiple-Linear-Regression/multiple-linear-regression-dataset.csv")
 print(data.info())
 print(data.head())
 #print(data.describe())

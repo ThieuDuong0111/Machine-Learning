@@ -7,7 +7,7 @@ from sklearn.metrics import r2_score
 from sklearn.linear_model import LinearRegression
 
 # import data
-data = pd.read_csv("Exercise/Linear-Regression/linear-regression-dataset.csv")
+data = pd.read_csv("Exercise/01-Linear-Regression/linear-regression-dataset.csv")
 print(data.info())
 print(data.head())
 #print(data.describe())
