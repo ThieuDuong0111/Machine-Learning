@@ -21,7 +21,18 @@ plt.xlabel("araba_max_hiz")
 plt.ylabel("araba_fiyat")
 # plt.show()
 
+'''
+Tạo bộ biến đổi dữ liệu thành đa thức
+degree=4 nghĩa là mô hình sẽ sử dụng đa thức bậc 4 (𝑥,𝑥2,𝑥3,𝑥4).
+Ban đầu, dữ liệu X chỉ có dạng:
+𝑋=[𝑥]
+Sau khi dùng PolynomialFeatures(degree=4), dữ liệu sẽ biến đổi thành:
+𝑋=[1,𝑥,𝑥2,𝑥3,𝑥4]
+(Thêm các bậc cao hơn để mô hình phi tuyến tính).
+'''
 polynominal_regression = PolynomialFeatures(degree=4)
+
+# fit_transform(x, y): Áp dụng biến đổi đa thức lên x.
 x_polynomial = polynominal_regression.fit_transform(x,y)
 
 linear_regression = LinearRegression()
