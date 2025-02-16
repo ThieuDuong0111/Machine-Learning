@@ -8,7 +8,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
 # import data
-data = pd.read_csv("Exercise/03-Polynomial-Linear-Regression/polynomial-regression-dataset.csv")
+data = pd.read_csv("Exercise-Algorithms/03-Polynomial-Linear-Regression/polynomial-regression-dataset.csv")
 print(data.info())
 print(data.head())
 #print(data.describe())

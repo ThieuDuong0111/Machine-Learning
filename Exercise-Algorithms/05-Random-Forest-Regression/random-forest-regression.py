@@ -7,7 +7,7 @@ import graphviz
 
 from sklearn.metrics import r2_score
 
-data = pd.read_csv("Exercise/05-Random-Forest-Regression/random-forest-regression-dataset.csv", header=None)
+data = pd.read_csv("Exercise-Algorithms/05-Random-Forest-Regression/random-forest-regression-dataset.csv", header=None)
 print(data.info())
 print(data.head())
 #print(data.describe())
@@ -78,5 +78,5 @@ plt.show()
 
 # # 📌 Vẽ Decision Tree
 # graph = graphviz.Source(dot_data)
-# graph.render("Exercise/05-Random-Forest-Regression/decision_tree.pdf")  # Lưu cây quyết định thành file PDF
+# graph.render("Exercise-Algorithms/05-Random-Forest-Regression/decision_tree.pdf")  # Lưu cây quyết định thành file PDF
 # graph.view()  # Hiển thị cây quyết định

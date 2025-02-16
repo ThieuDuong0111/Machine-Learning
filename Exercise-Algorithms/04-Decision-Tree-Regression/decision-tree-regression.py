@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.tree import DecisionTreeRegressor, plot_tree
 from sklearn.metrics import r2_score
 
-data = pd.read_csv("Exercise/04-Decision-Tree-Regression/decision-tree-regression-dataset.csv", header=None)
+data = pd.read_csv("Exercise-Algorithms/04-Decision-Tree-Regression/decision-tree-regression-dataset.csv", header=None)
 print(data.info())
 print(data.head())
 #print(data.describe())
