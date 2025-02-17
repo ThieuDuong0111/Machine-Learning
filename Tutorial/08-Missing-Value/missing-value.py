@@ -6,7 +6,11 @@ X_full = pd.read_csv('Tutorial/train.csv', index_col='Id')
 X_test_full = pd.read_csv('Tutorial/test.csv', index_col='Id')
 
 # Remove rows with missing target, separate target from predictors
+
+print("Before drop: ", X_full.shape)
 X_full.dropna(axis=0, subset=['SalePrice'], inplace=True)
+print("After drop: ", X_full.shape)
+
 y = X_full.SalePrice
 X_full.drop(['SalePrice'], axis=1, inplace=True)
 
@@ -52,6 +56,7 @@ def score_dataset(X_train, X_valid, y_train, y_valid):
 # Get names of columns with missing values
 cols_with_missing = [col for col in X_train.columns
                      if X_train[col].isnull().any()]
+# print("Column with missing value: ", cols_with_missing)
 
 # Fill in the lines below: drop columns in training and validation data
 reduced_X_train = X_train.drop(cols_with_missing, axis=1)
@@ -69,7 +74,7 @@ my_imputer = SimpleImputer()
 imputed_X_train = pd.DataFrame(my_imputer.fit_transform(X_train))
 imputed_X_valid = pd.DataFrame(my_imputer.transform(X_valid))
 
-# Fill in the lines below: imputation removed column names; put them back
+# Imputation removed column names; put them back
 imputed_X_train.columns = X_train.columns
 imputed_X_valid.columns = X_valid.columns
 

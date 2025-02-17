@@ -75,7 +75,7 @@ print('MAE:', mean_absolute_error(y_valid, preds))
 '''Step 1: Improve the performance'''
 
 # Preprocessing for numerical data
-numerical_transformer = SimpleImputer(strategy='constant') # Your code here
+numerical_transformer = SimpleImputer(strategy='constant')
 
 # Preprocessing for categorical data
 categorical_transformer = Pipeline(steps=[
